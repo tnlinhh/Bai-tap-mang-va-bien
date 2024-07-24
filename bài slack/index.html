@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bài slack</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 7, 5, 9, 2, 6];
+        // In ra tổng các phần tử chẵn trong mảng
+        let tong = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 2 === 0) {
+                tong += arr[i];
+            }
+        }
+        console.log("Tổng các phần tử chẵn:", +tong); // Kết quả: 8 (2 + 6)
+
+        // In ra tổng các phần tử >10 trong mảngr
+        let tongHon10 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] > 10) {
+                tongHon10 += arr[i];
+            }
+        }
+        console.log("Tổng các phần tử > 10:", tongHon10); // Kết quả: 0 (không có phần tử nào > 10)
+
+        // In ra tổng các phần tử chia 7 dư 2 trong mảng
+        let tongChia7Du2 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 7 === 2) {
+                tongChia7Du2 += arr[i];
+            }
+        }
+        console.log("Tổng các phần tử chia 7 dư 2:", tongChia7Du2); // Kết quả: 9 (9 + 2)
+
+        //  In ra max của các phần tử chẵn mảng
+        let max = arr[0]
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i] % 2 == 0) {
+                if (max < arr[i])
+                    max = arr[i]
+            }
+        }
+        console.log("Max của các phần tử chẵn:", maxChan); // Kết quả: 6
+
+        // In ra lớn nhất của mảng
+        let max2 = arr[0]
+        for (let i = 1; i < arr.length; i++) {
+            if (max2 < arr[i])
+                max2 = arr[i]
+        }
+        console.log("Lớn nhất của mảng:", max2); // Kết quả: 9
+
+        // In ra số lượng các phần tử chia hết cho 5 trong mảng
+        let soLuongPhanTuChiaHet5 = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 5 === 0) {
+                soLuongPhanTuChiaHet5++;
+            }
+        }
+        console.log("Số lượng các phần tử chia hết cho 5:", soLuongPhanTuChiaHet5); // Kết quả: 1 (5)
+        
+        // In ra trung bình các phần tử chia hết cho 5 trong mảng
+        console.log('Trung bình phẩn tử chia hết cho 5')
+        let tongtrungbinh = 0
+        let dem = 0
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] % 5 == 0) {
+                tongtrungbinh += arr[i]
+                dem++
+            }
+        }
+        console.log(tongtrungbinh / dem)
+        // Tìm phần tử lớn thứ 2 trong mảng (nâng cao: 1 vòng lặp)
+        console.log('In ra lớn thu 2 của mảng')
+        let max4 = arr[0]
+        let max_thu2 = arr[0]
+        for (let i = 1; i <= arr.length; i++) {
+            if (max4 < arr[i]) {
+                max4 = arr[i]
+            }
+            for (let j = 2; j <= arr.length; j++) {
+                if (max_thu2 < arr[j] && arr[j] < max4)
+                    maxthu2 = arr[j]
+            }
+        }
+        console.log(max_thu2)
+    </script>
+</body>
+
+</html>

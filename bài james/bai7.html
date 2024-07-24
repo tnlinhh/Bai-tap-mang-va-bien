@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mangSoNguyen = [];
+        for (let i = 0; i < 10; i++) {
+            let so = parseInt(prompt("Nhập vào số nguyên thứ " + (i + 1) + ":"));
+            mangSoNguyen.push(so);
+        }
+        let V = parseInt(prompt("Nhập vào số nguyên V:"));
+        function xoaPhanTu(mang, phanTu) {
+            let viTri = mang.indexOf(phanTu);
+            if (viTri !== -1) {
+                // Di chuyển các phần tử bên phải của phần tử V sang trái
+                for (let i = viTri; i < mang.length - 1; i++) {
+                    mang[i] = mang[i + 1];
+                }
+                mang[mang.length - 1] = 0;
+            }
+
+            return mang;
+        }
+        let mangSauKhiXoa = xoaPhanTu(mangSoNguyen, V);
+        console.log("Mảng sau khi xử lý:", mangSauKhiXoa);
+    </script>
+</body>
+</html>

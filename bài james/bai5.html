@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function demSoNguyenAm(chuoi) {
+            let mangSo = chuoi.split(" ");
+            let soLuongAm = 0;
+            for (let i = 0; i < mangSo.length; i++) {
+                let so = parseFloat(mangSo[i]);
+                if (!isNaN(so) && so < 0) {
+                    soLuongAm++;
+                }
+            }
+            return soLuongAm;
+        }
+        let chuoiNhapVao = prompt("Nhập vào chuỗi chứa các số nguyên (cách nhau bằng khoảng trắng):");
+        let ketQua = demSoNguyenAm(chuoiNhapVao);
+        console.log("Số lượng số nguyên âm trong chuỗi là:", ketQua);
+    </script>
+</body>
+</html>

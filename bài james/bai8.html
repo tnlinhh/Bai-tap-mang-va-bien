@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let mangSoNguyen = [12, 45, 23, 89, 56, 34, 78, 67, 90, 21];
+        function sapXepGiamDan(mang) {
+            return mang.sort((a, b) => b - a);
+        }
+        let mangDaSapXep = sapXepGiamDan(mangSoNguyen);
+        console.log("Mảng đã sắp xếp theo thứ tự giảm dần:", mangDaSapXep);
+    </script>
+</body>
+</html>
